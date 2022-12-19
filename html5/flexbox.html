@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            flex-direction: row; /*row def özelliktir. row'a göre sıralar, */
+            width: 75%;
+            margin: 0 auto;
+            justify-content: flex-start; /* direction row ise = justify - content yatayda konumlandımra*/
+            /*dikeyde sıralama için align-items*/
+            background-color: black;
+            min-height: 600px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            color: black;
+            border: 1px solid red;
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            text-align: center;
+            flex-grow: 1; /*ile nesneleri parent'a sığdırıyoruz. item'de de kullanılabiliyor oranlı bir şekilde doldurma*/
+            
+        }
+        .box-1{
+            background-color: red;
+            
+        }
+        .box-2{
+            background-color: blue;
+            
+        }
+        .box-3{
+            background-color: green;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">
+            <h1>Article 1</h1>
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+        <div class="box box-2">
+            <h1>Article 1</h1>
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+        <div class="box box-3">
+            <h1>Article 1</h1>
+            <p>Lorem, ipsum dolor.</p>
+        </div>
+    </div>
+</body>
+</html>
